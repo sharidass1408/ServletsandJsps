@@ -52,9 +52,9 @@ public class SessionExample extends HttpServlet {
 		String savedname = (String)session.getAttribute("savedsessionname");
 		String savedcontextname = (String)context.getAttribute("savedcontextname");
 		
-		pw.print("Name from request: "+ name+"\t" );	
+		pw.println("Name from request: "+ name+"\t" );	
 		pw.println("Name from session: "+ savedname +"\t");
-		pw.println("Name from session: "+ savedcontextname +"\t");
+		pw.println("Name from context: "+ savedcontextname +"\t");
 		
 		
 	}

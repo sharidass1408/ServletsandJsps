@@ -5,8 +5,9 @@
       <servlet-name>servletwithxml</servlet-name>
       <servlet-class>com.nbna.servlet.ServletWithXMLConfig</servlet-class>
   </servlet>
+  
   <servlet-mapping>
       <servlet-name>servletwithxml</servlet-name>
-      <url-pattern>/xmlservlet</url-pattern>
+      <url-pattern>/xmlservlet1</url-pattern>
   </servlet-mapping>
 </web-app>

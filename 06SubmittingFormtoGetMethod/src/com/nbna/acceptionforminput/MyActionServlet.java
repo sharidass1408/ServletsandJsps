@@ -2,6 +2,7 @@ package com.nbna.acceptionforminput;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,6 +23,12 @@ public class MyActionServlet extends HttpServlet {
 		PrintWriter pw= response.getWriter();
 		
 		pw.println("Welcom to the world of HTML and Java: "+ name );
+		
+		ArrayList<String> al = new ArrayList<String>();
+		
+		al.add("sai");
+		al.add("krishna");	
+		System.out.println(al);
 		
 		
 	}
