@@ -13,14 +13,14 @@
 	<%!public int add(int a, int b) {
 		return a + b;
 	}%>
-
+	<!--  -->
 	<%
 		int i = 1;
 		int j = 2;
 		int k;
 		k = i + j;
 
-		//out.println("Value of K is " + k);
+		out.println("Value of K is from scriplet " + k);
 	%>
 
 	The value of k is:
@@ -34,6 +34,6 @@
 	<br>The value of L is:
 	<%=l%>
 	
-	<%@ include file="/HelloClass.jsp" %>
+	  <%@ include file="/HelloClass.jsp" %>
 </body>
 </html>
