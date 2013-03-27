@@ -22,7 +22,7 @@ public abstract class DatabaseAccessor {
 	/*
 	 * To Demo constructor chain usage. 
 	 */
-	public DatabaseAccessor() {	
+	public DatabaseAccessor() {		
 		this("jdbc:mysql://localhost:3306/","nbna_database","com.mysql.jdbc.Driver","root","sriram1408");
 	}
 	

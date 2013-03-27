@@ -11,22 +11,28 @@
 <h3>Congrats you sucessfully logged in </h3>
 
 <jsp:useBean id="user" class="com.nbna.model.User" scope ="session">
-<!-- The values inside the use bean tag will be used if user object does not exist in session scope -->
-	<jsp:setProperty property="name" name="user" value="Default user"/>
+     ${user.setName()}
+	 ${user.setUserid() }
+	 ${user.setEmail()} 	
+ 	 ${user.setAddress().setStreet()}
+	 ${user.setAddress().setCity()}
+	 ${user.setAddress().setState()}
+     ${user.setAddress().setZip()}
 </jsp:useBean>
 
 <h4> The following are your login details</h4>
-
-    Name: <jsp:getProperty property="name" name="user" />
- 	UserId: <jsp:getProperty property="userid" name="user"/>
- 	Email: <jsp:getProperty property="email" name="user" />
- 	
+   
+ 	Name: ${user.getName()}
+	UserId: ${user.getUserid() }
+	Email: ${user.getEmail()}
+ 	 	 	
  	<br>Shipping Address:<br>
  	
- 	Street: <jsp:getProperty property="street" name="user"/>
- 	City: <jsp:getProperty property="city" name="user"/>
- 	State:	<jsp:getProperty property="state" name="user"/>
- 	ZipCode: <jsp:getProperty property="zip" name="user"/>
+ 	Street: ${user.getAddress().getStreet()}
+	city : ${user.getAddress().getCity()}
+	state : ${user.getAddress().getState()}
+ 	zip :${user.getAddress().getZip()}
+
  
 </body>
 </html>

@@ -1,0 +1,4 @@
+In this project the points that I tried to demo is how 
+to capture data from screen with out using HTML Tags by just making
+use of getProperty. Compare the viewRegistrationForm.jsp in both
+17Reg_and_login_withUseBean_setProperty. 

@@ -55,7 +55,8 @@ public abstract class DatabaseAccessor {
 				System.out.println("connection info:"+this.url+this.dbName+" "+this.userName+" "+this.password);
 				System.out.println("Sucessfully got the connection and set the value to connection feild variable");
 				return DriverManager.getConnection(this.url+this.dbName,this.userName,this.password);
-			} catch (InstantiationException ine) {
+			}
+			catch (InstantiationException ine) {
 				System.out.println("InstantiationException exception occured: ");
 				ine.printStackTrace();
 			} catch (IllegalAccessException ile) {
@@ -67,6 +68,13 @@ public abstract class DatabaseAccessor {
 			} catch (SQLException e) {
 				System.out.println("Unknown exception occured: ");
 				e.printStackTrace();
+			}
+			catch (Exception e) {
+				System.out.println("Unknown exception occured: ");
+				e.printStackTrace();
+				}
+			finally{
+				
 			}
 			
 			return null;	

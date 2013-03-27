@@ -22,7 +22,7 @@
 
 		out.println("Value of K is from scriplet " + k);
 	%>
-
+<%@ include file="/HelloClass.jsp" %>
 	The value of k is:
 	<%=k%>
 	The sum of 2+3 is:
@@ -34,6 +34,6 @@
 	<br>The value of L is:
 	<%=l%>
 	
-	  <%@ include file="/HelloClass.jsp" %>
+	  <!-- <%@ include file="/HelloClass.jsp" %> -->
 </body>
 </html>

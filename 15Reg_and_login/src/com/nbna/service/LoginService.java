@@ -7,6 +7,7 @@ import com.nbna.model.User;
 public class LoginService {		
 	
 	LoginDataDAO ldd = null;
+
 	private User userdata_from_database;
 	
 	public boolean getLoginStatus(HttpServletRequest request) {

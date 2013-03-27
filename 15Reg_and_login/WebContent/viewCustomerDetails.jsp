@@ -17,16 +17,16 @@ User user = (User) session.getAttribute("user");
 
 <h4> The following are your login details</h4>
 
-    Name: <%= user.getName() %>
- 	UserId: <%= user.getUserid() %>	
- 	Email: <%=user.getEmail() %>
+    Name: <%= user.getName() %> <br>
+ 	UserId: <%= user.getUserid() %><br>	
+ 	Email: <%=user.getEmail() %><br>
  	
  	<br>Shipping Address:<br>
  	
- 	Street: <%= user.getStreet() %>
- 	City: <%= user.getCity() %>
- 	State:	<%=user.getState() %>
- 	ZipCode: <%=user.getZip() %>
+ 	Street: <%= user.getStreet() %><br>
+ 	City: <%= user.getCity() %><br>
+ 	State:	<%=user.getState() %><br>
+ 	ZipCode: <%=user.getZip() %><br>
  
 </body>
 </html>

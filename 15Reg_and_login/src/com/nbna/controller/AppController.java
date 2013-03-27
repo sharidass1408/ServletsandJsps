@@ -55,12 +55,20 @@ public class AppController extends HttpServlet {
 			LoginService ls = new LoginService();			
 			boolean status= ls.getLoginStatus(request);
 			
-			
+			/*
+			 * if entered password is same as the password from the database then do the logic 
+			 * in if statement
+			 */
 			if(status){
 				System.out.println("This is login sucess");
 				User user = ls.getUserInfo();				
+				
+				/*request.getSession().setAttribute("userid",request.getParameter("userid"));
+				request.getSession().setAttribute("name",request.getParameter("name"));*/
+				
 				request.getSession().setAttribute("user",user);
 				response.sendRedirect("viewCustomerDetails.jsp");
+				
 				
 				
 			}
@@ -75,8 +83,6 @@ public class AppController extends HttpServlet {
 
 }
 
-
-
 /*
  * Second way to do it is using RequestDispather it has following advantages
  * 	1) Browser does not get involved in sending request i.e. the url does not change
@@ -88,3 +94,4 @@ public class AppController extends HttpServlet {
 /*request.setAttribute("user", user);
 RequestDispatcher dispatcher = request.getRequestDispatcher("viewCustomerDetails.jsp");
 dispatcher.forward(request,response);*/
+

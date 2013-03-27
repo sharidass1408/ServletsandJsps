@@ -14,9 +14,9 @@
 		if (userName != null) {
 			session.setAttribute("sessionUserName", userName);
 			application.setAttribute("applicationUserName", userName);
-			pageContext.setAttribute("pageContextUserName", userName);
+			//pageContext.setAttribute("pageContextUserName", userName);
 
-			//pageContext.setAttribute("sessionUserName",userName, PageContext.SESSION_SCOPE);
+			pageContext.setAttribute("sessionUserName1",userName, PageContext.SESSION_SCOPE);
 			//pageContext.setAttribute("applicationUserName",userName, PageContext.APPLICATION_SCOPE);
 		 	
 
@@ -31,9 +31,16 @@
 	<%=application.getAttribute("applicationUserName")%>
 
 	<br> User name in the page context object is:
-	<%=pageContext.getAttribute("pageContextUserName")%>
+	<%=pageContext.getAttribute("sessionUserName1")%>
 	
 	<br> The Attribute of pageConext is:
 	<%pageContext.findAttribute("name"); %>
+	
+	<br> Config get ServletName:
+	<%=config.getClass()%>
+	
+	<br> page value:
+	<%=page.getClass()%>
+	
 </body>
 </html>
